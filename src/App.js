@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import useUserInfo from "./customhook/useUserInfo";
 
 function App() {
+  const { userList, current, next, previous } = useUserInfo(
+    "https://randomuser.me/api"
+  );
+  console.log({ current });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>AllUsers:</p>
+      {userList.map((user) => (
+        <b key={user.name.first}>{user.name.first}</b>
+      ))}
+      <p>Current User:</p>
+      {current !== undefined && <b>{current.name.first}</b>}
+      <button onClick={() => previous()}>previous</button>
+      <button onClick={() => next()}>Next</button>
     </div>
   );
 }
