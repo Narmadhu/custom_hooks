@@ -1,0 +1,36 @@
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  background: linear-gradient(to top right, #ff99cc 0%, #33ccff 100%);
+  width: 100px;
+}
+.highlight {
+  transform: scale(1.5, 1.5);
+}
+.disabledBtn {
+  background: linear-gradient(to top right, #7b7b7b1f 0%, #4f4f4f 100%);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.allusers {
+  height: 300px;
+  width: 400px;
+  background-color: rgb(178, 178, 178);
+  padding: 10px;
+  overflow-y: auto;
+  margin: 10px;
+  background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
+  color: white;
+}
+.userTitle {
+  margin: 0 0 0 15px;
+}
